@@ -1,0 +1,23 @@
+<p>mycomponent works!</p>
+<p>welcome to {{title}}</p>
+<h2>Using ng if</h2>
+<input type="radio" name="radio1" (click)="changeValue(true)">True
+<input type="radio" name="radio1" (click)="changeValue(false)">False
+<div >ABC</div>
+
+<div *ngIf="isValid">ValidData</div>
+<div *ngIf="!isValid">Not ValidData</div>
+
+<div *ngIf="isValid; then thenblock; else elseblock" >
+
+
+
+</div>
+<ng-template #thenblock>
+    <div>This is then block</div>
+</ng-template>
+
+<ng-template #elseblock>
+    <div>This is else block</div>
+</ng-template>
+<button (click)="clickMe()">Click me</button>
